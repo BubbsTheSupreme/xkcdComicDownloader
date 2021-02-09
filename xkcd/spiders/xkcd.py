@@ -22,7 +22,5 @@ class XkcdSpider(scrapy.Spider):
 		item['image_urls'] = img_urls
 		yield item
 
-
-
 	def error_response(self, failure):
 		print(f'FAILURE: {failure}')

@@ -9,12 +9,7 @@ from itemadapter import ItemAdapter
 from scrapy.pipelines.images import ImagesPipeline
 from xkcd.items import XkcdItem
 
-class XkcdPipeline:
+class XkcdPipeline(ImagesPipeline):
 
-	name = ''
-
-    def process_item(self, item, spider):
-        self.name = item['comic_name']
-
-   	def file_path():
-   		return self.name
+	def file_path(self, request, response=None, info=None):
+		return request.url.split('/')[-1]

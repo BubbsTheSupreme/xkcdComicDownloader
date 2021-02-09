@@ -65,7 +65,7 @@ ROBOTSTXT_OBEY = True
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
    # 'xkcd.pipelines.XkcdPipeline': 300,
-   'scrapy.pipelines.images.ImagesPipeline': 1,
+   'xkcd.pipelines.XkcdPipeline': 1,
 }
 
 IMAGES_STORE = 'comics'
